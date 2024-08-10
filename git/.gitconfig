@@ -1,0 +1,47 @@
+; external gitconfig files hold the personal acount informations like unsername and email
+[include]
+    path = ~/.gitconfig-default 
+
+[includeIf "gitdir:~/Workspace/MOVE/"]
+    path = ~/.gitconfig-tum
+[includeIf "gitdir:~/Workspace/Uni/"]
+    path = ~/.gitconfig-tum
+[includeIf "gitdir:~/Workspace/WARR/"]
+    path = ~/.gitconfig-tum
+
+
+; customization
+[init]
+    defaultBranch = main
+[core]
+    autocrlf = input
+    safecrlf = warn
+    pager = delta  ; delta pager stuff
+
+[alias]
+    ; co = checkout
+    co = switch # because my muscle memory still does co
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+
+; delat pager stuff
+[difftool]
+        prompt = false
+
+[difftool "difftastic"]
+        cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+        difftool = true
+
+
+[pull]
+	rebase = false
+
+[oh-my-zsh]
+	hide-status = 1
+	hide-dirty = 1

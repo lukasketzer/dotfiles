@@ -1,0 +1,20 @@
+alias sd="sudo shutdown -h now"
+alias uupdate="sudo pacman -Syyu && flatpak update && yay -Syyu"
+alias autoremove='sudo pacman -Rns $(pacman -Qtdq)'
+alias ls="eza --icons -h --color-scale all --git"
+alias cat="bat -p --paging=never --style=plain"
+alias vim="nvim"
+alias fd="fd -I -H"
+alias df="df -h"
+alias du="du -h"
+alias copy="xclip -selection clipboard"  # x11 exclusive
+alias fc="fc -e 'nvim'"
+alias open="xdg-open"
+alias dd="dd status=progress"
+alias cp="cp -v"
+alias restart_plasma="kquitapp5 plasmashell || killall plasmashell && kstart5 plasmashell"
+alias reboot_windows="sudo grub-reboot 2 && sudo reboot"
+alias obsidian="flatpak run md.obsidian.Obsidian"
+alias fzfe='nvim $(fzf --preview "bat --color=always {}")'
+alias pdf="zathura" 
+alias suspend='sudo systemctl suspend'
