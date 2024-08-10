@@ -1,5 +1,7 @@
 require("plugins")
 require("plugin-config.init")
+-- editor config
+vim.g.editorconfig = true
 -- spaces instead of tabs
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
