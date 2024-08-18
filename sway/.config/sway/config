@@ -98,20 +98,20 @@ bindsym 0xfd1d exec /home/lukas/new_dotfiles/sway/.config/sway/screenshot.sh
 
 # ========= Brigthness Control =========
 # from /usr/include/xkbcommon/xkbcommon-keysyms.h
-bindsym XF86MonBrightnessUp exec brightnessctl set 3%+
-bindsym XF86MonBrightnessDown exec brightnessctl set 3%-
+bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 
 # ========= Volume Control =========
 #TODO: not done yet
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 -u normal "$([[ $(pactl get-sink-mute @DEFAULT_SINK@ | grep yes) ]] && echo Audio muted || echo Audio unmuted)"
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 -u normal "$([[ $(pactl get-sink-mute @DEFAULT_SINK@ | grep ja) ]] && echo Audio muted || echo Audio unmuted)"
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # mute audio
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -t 1000 -u normal "$([[ $(pactl get-sink-mute @DEFAULT_SINK@ | grep yes) ]] && echo Audio muted || echo Audio unmuted)"
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send -t 1000 -u normal "$([[ $(pactl get-sink-mute @DEFAULT_SINK@ | grep ja) ]] && echo Audio muted || echo Audio unmuted)"
 
 # mic mute
-bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && notify-send -t 1000 -u normal "$([[ $(pactl get-source-mute @DEFAULT_SOURCE@ | grep yes) ]] && echo Input muted || echo Input unmuted)"
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && notify-send -t 1000 -u normal "$([[ $(pactl get-source-mute @DEFAULT_SOURCE@ | grep ja) ]] && echo Input muted || echo Input unmuted)"
 
 # play / pause, next, prev
 bindsym XF86AudioPlay exec playerctl play-pause; exec notify-send -t 2500 -u normal "$(playerctl -f '{{playerName}}' metadata)" "$(playerctl -f '{{title}}' metadata)\n$(playerctl -f '{{artist}}' metadata)"

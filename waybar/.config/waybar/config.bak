@@ -11,6 +11,7 @@
     "modules-right": [
         "idle_inhibitor",
         "custom/weather",
+        "custom/vpn",
         "network",
         "pulseaudio",
         "clock",
@@ -103,7 +104,7 @@
     "custom/weather": {
         "format": "{}",
         "interval": 3600,
-        "exec": "curl -s 'https://wttr.in/Munich?format=1'",
+        "exec": "curl -s 'https://wttr.in/~41.03508,28.98331?format=1'",
         "exec-if": "ping wttr.in -c1"
     },
     "custom/vpn": {
