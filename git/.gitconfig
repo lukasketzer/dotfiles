@@ -19,8 +19,8 @@
     pager = delta  ; delta pager stuff
 
 [alias]
-    ; co = checkout
-    co = switch # because my muscle memory still does co
+    co = checkout
+    ; co = switch # because my muscle memory still does co
     ci = commit
     st = status
     br = branch
