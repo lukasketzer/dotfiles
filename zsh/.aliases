@@ -18,3 +18,4 @@ alias obsidian="flatpak run md.obsidian.Obsidian"
 alias fzfe='nvim $(fzf --preview "bat --color=always {}")'
 alias pdf="zathura" 
 alias suspend='sudo systemctl suspend'
+alias zed='zeditor'
