@@ -1,5 +1,5 @@
 alias sd="sudo shutdown -h now"
-alias uupdate="sudo pacman -Syyu && flatpak update && yay -Syyu"
+alias uupdate="yay -Syyu && flatpak update"
 alias autoremove='sudo pacman -Rns $(pacman -Qtdq)'
 alias ls="eza --icons -h --color-scale all --git"
 alias cat="bat -p --paging=never --style=plain"
@@ -19,3 +19,4 @@ alias fzfe='nvim $(fzf --preview "bat --color=always {}")'
 alias pdf="zathura" 
 alias suspend='sudo systemctl suspend'
 alias zed='zeditor'
+alias dtuvpn='sudo openconnect --background --user=s242110 --useragent=AnyConnect vpn.dtu.dk'
