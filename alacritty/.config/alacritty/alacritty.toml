@@ -1,11 +1,4 @@
 
-import = [
-    # "/home/lukas/.config/alacritty-theme/themes/tomorrow_night_bright.toml"
-    # "/home/lukas/.config/alacritty-theme/themes/afterglow.toml"
-    # "./theme.toml"
-
-]
-
 [[colors.indexed_colors]]
 color = "#FAB387"
 index = 16
@@ -110,3 +103,12 @@ size = 12
 [window.dimensions]
 columns = 100
 lines = 24
+
+[general]
+
+import = [
+    # "/home/lukas/.config/alacritty-theme/themes/tomorrow_night_bright.toml"
+    # "/home/lukas/.config/alacritty-theme/themes/afterglow.toml"
+    # "./theme.toml"
+
+]
